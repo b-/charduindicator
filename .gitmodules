@@ -1,0 +1,6 @@
+[submodule "lib/chaplex"]
+	path = lib/chaplex
+	url = https://github.com/b-/chaplex.git
+[submodule "lib/Arduino-SerialCommand"]
+	path = lib/Arduino-SerialCommand
+	url = https://github.com/fvdpol/Arduino-SerialCommand.git
