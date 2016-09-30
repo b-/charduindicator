@@ -1,5 +1,5 @@
 # charduindicator
-##(**char**lieplexed **ardu**ino **indicator**)
+(*char*lieplexed *ardu*ino *indicator*)
 
 This is an Arduino project that controls a 4x5 LED charlieplexed display, via simple serial commands such as `on 1` (to turn on the first LED) and `off 20` (to turn off the twentieth LED).
 
