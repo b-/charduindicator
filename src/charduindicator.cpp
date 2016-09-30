@@ -5,8 +5,6 @@ SerialCommand sCmd;
 
 #include <Chaplex.h>
 byte ctrlpins[5] = {2,3,4,5,6};    //Arduino pins controlling charlieplexed leds
-#define PINS 5                //number of these pins
-
 
 Chaplex myCharlie(ctrlpins, sizeof(ctrlpins));     //control instance
 
@@ -32,19 +30,15 @@ void clear() {
 void ledOn() {
   char *ledStr;
   ledStr = sCmd.next();
-  int led = atoi(ledStr);
-  led = led - 1;
+  int led = atoi(ledStr) - 1;
   myCharlie.ledWrite(myLeds[led], 1);
-  //myCharlie.outRow();
 }
 
 void ledOff() {
   char *ledStr;
   ledStr = sCmd.next();
-  int led = atoi(ledStr);
-  led = led - 1;
+  int led = atoi(ledStr) - 1;
   myCharlie.ledWrite(myLeds[led],0);
-  //myCharlie.outRow();
 }
 void setup() {
   // Initialize charlieplex array — turn off all LEDs.
