@@ -52,25 +52,17 @@ void ledOff() {
   myCharlie.ledWrite(myLeds[led],0);
 }
 void cycle() {
-  int cled = 0;
-  while( cled < 20 ) {
+  for (int cled = 0; cled <= 19; cled++) {
     myCharlie.ledWrite(myLeds[cled],1);
-//    myCharlie.outRow();
     delay(10);
-    cled++;
-    //myCharlie.allClear();
-
   }
+  delay(20);
   myCharlie.allClear();
-  cled = 20;
-  while( cled > 0 ) {
+  for (int cled = 20; cled >= 0; cled--) {
     myCharlie.ledWrite(myLeds[cled],1);
-//    myCharlie.outRow();
     delay(10);
-    cled--;
-    //myCharlie.allClear();
-
   }
+  delay(40);
   myCharlie.allClear();
 
 }
